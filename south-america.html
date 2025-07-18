@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>South America Continent - Countries</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: rgba(0, 0, 0, 0.6);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    }
+
+    .main-heading {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #00bfff, #66fcf1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2px;
+    }
+
+    .search-box {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .search-box input {
+      padding: 10px 15px;
+      width: 300px;
+      max-width: 90%;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      box-shadow: 0 0 10px rgba(0,191,255, 0.6);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 60px 40px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      border-radius: 15px;
+      padding: 30px 20px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 0 20px rgba(0,191,255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0,191,255, 0.4);
+    }
+
+    .card h3 {
+      font-size: 1.6rem;
+      color: #00bfff;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #ccc;
+      margin: 4px 0;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #00bfff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .card a:hover {
+      background-color: #0099cc;
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0.5);
+      color: #aaa;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .main-heading {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="main-heading">South America Continent Countries</h1>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search by country or code..." onkeyup="filterCountries()" />
+    </div>
+  </header>
+
+  <section class="container" id="countryCards">  
+  
+  <div class="card">
+  <h3>1. Argentina</h3>
+  <p><strong>Capital:</strong> Buenos Aires</p>
+  <p><strong>Code:</strong> +54</p>
+  <p><strong>Population:</strong> 45 million</p>
+  <p><strong>Language:</strong> Spanish</p>
+  <p><strong>Currency:</strong> Argentine Peso (ARS)</p>
+  <p><a href="https://www.google.com/maps/place/Argentina" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>2. Bolivia</h3>
+  <p><strong>Capital:</strong> Sucre</p>
+  <p><strong>Code:</strong> +591</p>
+  <p><strong>Population:</strong> 12 million</p>
+  <p><strong>Language:</strong> Spanish, Quechua, Aymara</p>
+  <p><strong>Currency:</strong> Boliviano (BOB)</p>
+  <p><a href="https://www.google.com/maps/place/Bolivia" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>3. Brazil</h3>
+  <p><strong>Capital:</strong> Brasília</p>
+  <p><strong>Code:</strong> +55</p>
+  <p><strong>Population:</strong> 214 million</p>
+  <p><strong>Language:</strong> Portuguese</p>
+  <p><strong>Currency:</strong> Brazilian Real (BRL)</p>
+  <p><a href="https://www.google.com/maps/place/Brazil" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>4. Chile</h3>
+  <p><strong>Capital:</strong> Santiago</p>
+  <p><strong>Code:</strong> +56</p>
+  <p><strong>Population:</strong> 19 million</p>
+  <p><strong>Language:</strong> Spanish</p>
+  <p><strong>Currency:</strong> Chilean Peso (CLP)</p>
+  <p><a href="https://www.google.com/maps/place/Chile" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>5. Colombia</h3>
+  <p><strong>Capital:</strong> Bogotá</p>
+  <p><strong>Code:</strong> +57</p>
+  <p><strong>Population:</strong> 52 million</p>
+  <p><strong>Language:</strong> Spanish</p>
+  <p><strong>Currency:</strong> Colombian Peso (COP)</p>
+  <p><a href="https://www.google.com/maps/place/Colombia" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>6. Ecuador</h3>
+  <p><strong>Capital:</strong> Quito</p>
+  <p><strong>Code:</strong> +593</p>
+  <p><strong>Population:</strong> 18 million</p>
+  <p><strong>Language:</strong> Spanish</p>
+  <p><strong>Currency:</strong> US Dollar (USD)</p>
+  <p><a href="https://www.google.com/maps/place/Ecuador" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>7. Guyana</h3>
+  <p><strong>Capital:</strong> Georgetown</p>
+  <p><strong>Code:</strong> +592</p>
+  <p><strong>Population:</strong> 0.8 million</p>
+  <p><strong>Language:</strong> English</p>
+  <p><strong>Currency:</strong> Guyanese Dollar (GYD)</p>
+  <p><a href="https://www.google.com/maps/place/Guyana" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>8. Paraguay</h3>
+  <p><strong>Capital:</strong> Asunción</p>
+  <p><strong>Code:</strong> +595</p>
+  <p><strong>Population:</strong> 7 million</p>
+  <p><strong>Language:</strong> Spanish, Guarani</p>
+  <p><strong>Currency:</strong> Guarani (PYG)</p>
+  <p><a href="https://www.google.com/maps/place/Paraguay" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>9. Peru</h3>
+  <p><strong>Capital:</strong> Lima</p>
+  <p><strong>Code:</strong> +51</p>
+  <p><strong>Population:</strong> 34 million</p>
+  <p><strong>Language:</strong> Spanish</p>
+  <p><strong>Currency:</strong> Sol (PEN)</p>
+  <p><a href="https://www.google.com/maps/place/Peru" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>10. Suriname</h3>
+  <p><strong>Capital:</strong> Paramaribo</p>
+  <p><strong>Code:</strong> +597</p>
+  <p><strong>Population:</strong> 0.6 million</p>
+  <p><strong>Language:</strong> Dutch</p>
+  <p><strong>Currency:</strong> Surinamese Dollar (SRD)</p>
+  <p><a href="https://www.google.com/maps/place/Suriname" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>11. Uruguay</h3>
+  <p><strong>Capital:</strong> Montevideo</p>
+  <p><strong>Code:</strong> +598</p>
+  <p><strong>Population:</strong> 3.5 million</p>
+  <p><strong>Language:</strong> Spanish</p>
+  <p><strong>Currency:</strong> Uruguayan Peso (UYU)</p>
+  <p><a href="https://www.google.com/maps/place/Uruguay" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>12. Venezuela</h3>
+  <p><strong>Capital:</strong> Caracas</p>
+  <p><strong>Code:</strong> +58</p>
+  <p><strong>Population:</strong> 28 million</p>
+  <p><strong>Language:</strong> Spanish</p>
+  <p><strong>Currency:</strong> Bolívar (VES)</p>
+  <p><a href="https://www.google.com/maps/place/Venezuela" target="_blank">View on Map</a></p>
+</div>
+  
+  </section>
+
+  <footer>
+    © 2025 South-America Continent Countries| Created by BlackWood Ai
+  </footer>
+
+  <script>
+    function filterCountries() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.querySelectorAll(".card");
+
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+
+</body>
+</html>
