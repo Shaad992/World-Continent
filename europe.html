@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Europe Continent - Countries</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: rgba(0, 0, 0, 0.6);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    }
+
+    .main-heading {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #00bfff, #66fcf1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2px;
+    }
+
+    .search-box {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .search-box input {
+      padding: 10px 15px;
+      width: 300px;
+      max-width: 90%;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      box-shadow: 0 0 10px rgba(0,191,255, 0.6);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 60px 40px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      border-radius: 15px;
+      padding: 30px 20px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 0 20px rgba(0,191,255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0,191,255, 0.4);
+    }
+
+    .card h3 {
+      font-size: 1.6rem;
+      color: #00bfff;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #ccc;
+      margin: 4px 0;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #00bfff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .card a:hover {
+      background-color: #0099cc;
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0.5);
+      color: #aaa;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .main-heading {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="main-heading">Europe Continent Countries</h1>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search by country or code..." onkeyup="filterCountries()" />
+    </div>
+  </header>
+
+  <section class="container" id="countryCards">
+    
+    <div class="card">
+  <h2>1. Albania</h2>
+  <p><strong>Capital:</strong> Tirana</p>
+  <p><strong>Country Code:</strong> +355</p>
+  <p><strong>Population:</strong> 2.8 million</p>
+  <p><strong>Language:</strong> Albanian</p>
+  <p><strong>Currency:</strong> Albanian lek (ALL)</p>
+  <p><a href="https://www.google.com/maps/place/Albania" target="_blank"> View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>2. Andorra</h2>
+  <p><strong>Capital:</strong> Andorra la Vella</p>
+  <p><strong>Country Code:</strong> +376</p>
+  <p><strong>Population:</strong> 77,000</p>
+  <p><strong>Language:</strong> Catalan</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <p><a href="https://www.google.com/maps/place/Andorra" target="_blank"> View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>3. Armenia</h2>
+  <p><strong>Capital:</strong> Yerevan</p>
+  <p><strong>Country Code:</strong> +374</p>
+  <p><strong>Population:</strong> 2.8 million</p>
+  <p><strong>Language:</strong> Armenian</p>
+  <p><strong>Currency:</strong> Armenian dram (AMD)</p>
+  <p><a href="https://www.google.com/maps/place/Armenia" target="_blank"> View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>4. Austria</h2>
+  <p><strong>Capital:</strong> Vienna</p>
+  <p><strong>Country Code:</strong> +43</p>
+  <p><strong>Population:</strong> 9 million</p>
+  <p><strong>Language:</strong> German</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <p><a href="https://www.google.com/maps/place/Austria" target="_blank"> View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>5. Azerbaijan</h2>
+  <p><strong>Capital:</strong> Baku</p>
+  <p><strong>Country Code:</strong> +994</p>
+  <p><strong>Population:</strong> 10 million</p>
+  <p><strong>Language:</strong> Azerbaijani</p>
+  <p><strong>Currency:</strong> Azerbaijani manat (AZN)</p>
+  <p><a href="https://www.google.com/maps/place/Azerbaijan" target="_blank"> View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>6. Belarus</h2>
+  <p><strong>Capital:</strong> Minsk</p>
+  <p><strong>Country Code:</strong> +375</p>
+  <p><strong>Population:</strong> 9.3 million</p>
+  <p><strong>Language:</strong> Belarusian, Russian</p>
+  <p><strong>Currency:</strong> Belarusian ruble (BYN)</p>
+  <p><a href="https://www.google.com/maps/place/Belarus" target="_blank"> View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>7. Belgium</h2>
+  <p><strong>Capital:</strong> Brussels</p>
+  <p><strong>Country Code:</strong> +32</p>
+  <p><strong>Population:</strong> 11.5 million</p>
+  <p><strong>Language:</strong> Dutch, French, German</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <p><a href="https://www.google.com/maps/place/Belgium" target="_blank"> View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>8. Bosnia and Herzegovina</h2>
+  <p><strong>Capital:</strong> Sarajevo</p>
+  <p><strong>Country Code:</strong> +387</p>
+  <p><strong>Population:</strong> 3.3 million</p>
+  <p><strong>Language:</strong> Bosnian, Croatian, Serbian</p>
+  <p><strong>Currency:</strong> Bosnia and Herzegovina convertible mark (BAM)</p>
+  <p><a href="https://www.google.com/maps/place/Bosnia+and+Herzegovina" target="_blank"> View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>9. Bulgaria</h2>
+  <p><strong>Capital:</strong> Sofia</p>
+  <p><strong>Country Code:</strong> +359</p>
+  <p><strong>Population:</strong> 6.9 million</p>
+  <p><strong>Language:</strong> Bulgarian</p>
+  <p><strong>Currency:</strong> Bulgarian lev (BGN)</p>
+  <p><a href="https://www.google.com/maps/place/Bulgaria" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>10. Croatia</h2>
+  <p><strong>Capital:</strong> Zagreb</p>
+  <p><strong>Country Code:</strong> +385</p>
+  <p><strong>Population:</strong> 4 million</p>
+  <p><strong>Language:</strong> Croatian</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <p><a href="https://www.google.com/maps/place/Croatia" target="_blank"> View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>11. Cyprus</h3>
+  <p><strong>Capital:</strong> Nicosia</p>
+  <p><strong>Code:</strong> +357</p>
+  <p><strong>Population:</strong> 1.2 million</p>
+  <p><strong>Language:</strong> Greek, Turkish</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Cyprus" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>12. Czech Republic (Czechia)</h3>
+  <p><strong>Capital:</strong> Prague</p>
+  <p><strong>Code:</strong> +420</p>
+  <p><strong>Population:</strong> 10.7 million</p>
+  <p><strong>Language:</strong> Czech</p>
+  <p><strong>Currency:</strong> Czech koruna (CZK)</p>
+  <a href="https://www.google.com/maps/place/Czech+Republic" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>13. Denmark</h3>
+  <p><strong>Capital:</strong> Copenhagen</p>
+  <p><strong>Code:</strong> +45</p>
+  <p><strong>Population:</strong> 5.9 million</p>
+  <p><strong>Language:</strong> Danish</p>
+  <p><strong>Currency:</strong> Danish krone (DKK)</p>
+  <a href="https://www.google.com/maps/place/Denmark" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>14. Estonia</h3>
+  <p><strong>Capital:</strong> Tallinn</p>
+  <p><strong>Code:</strong> +372</p>
+  <p><strong>Population:</strong> 1.3 million</p>
+  <p><strong>Language:</strong> Estonian</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Estonia" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>15. Finland</h3>
+  <p><strong>Capital:</strong> Helsinki</p>
+  <p><strong>Code:</strong> +358</p>
+  <p><strong>Population:</strong> 5.5 million</p>
+  <p><strong>Language:</strong> Finnish, Swedish</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Finland" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>16. France</h3>
+  <p><strong>Capital:</strong> Paris</p>
+  <p><strong>Code:</strong> +33</p>
+  <p><strong>Population:</strong> 67 million</p>
+  <p><strong>Language:</strong> French</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/France" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>17. Georgia</h3>
+  <p><strong>Capital:</strong> Tbilisi</p>
+  <p><strong>Code:</strong> +995</p>
+  <p><strong>Population:</strong> 3.7 million</p>
+  <p><strong>Language:</strong> Georgian</p>
+  <p><strong>Currency:</strong> Georgian lari (GEL)</p>
+  <a href="https://www.google.com/maps/place/Georgia" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>18. Germany</h3>
+  <p><strong>Capital:</strong> Berlin</p>
+  <p><strong>Code:</strong> +49</p>
+  <p><strong>Population:</strong> 83 million</p>
+  <p><strong>Language:</strong> German</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Germany" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>19. Greece</h3>
+  <p><strong>Capital:</strong> Athens</p>
+  <p><strong>Code:</strong> +30</p>
+  <p><strong>Population:</strong> 10.5 million</p>
+  <p><strong>Language:</strong> Greek</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Greece" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>20. Hungary</h3>
+  <p><strong>Capital:</strong> Budapest</p>
+  <p><strong>Code:</strong> +36</p>
+  <p><strong>Population:</strong> 9.6 million</p>
+  <p><strong>Language:</strong> Hungarian</p>
+  <p><strong>Currency:</strong> Hungarian forint (HUF)</p>
+  <a href="https://www.google.com/maps/place/Hungary" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>21. Iceland</h3>
+  <p><strong>Capital:</strong> Reykjavik</p>
+  <p><strong>Code:</strong> +354</p>
+  <p><strong>Population:</strong> 0.4 million</p>
+  <p><strong>Language:</strong> Icelandic</p>
+  <p><strong>Currency:</strong> Icelandic króna (ISK)</p>
+  <a href="https://www.google.com/maps/place/Iceland" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>22. Ireland</h3>
+  <p><strong>Capital:</strong> Dublin</p>
+  <p><strong>Code:</strong> +353</p>
+  <p><strong>Population:</strong> 5.1 million</p>
+  <p><strong>Language:</strong> Irish, English</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Ireland" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>23. Italy</h3>
+  <p><strong>Capital:</strong> Rome</p>
+  <p><strong>Code:</strong> +39</p>
+  <p><strong>Population:</strong> 59 million</p>
+  <p><strong>Language:</strong> Italian</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Italy" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>24. Kazakhstan (partly in Europe)</h3>
+  <p><strong>Capital:</strong> Astana</p>
+  <p><strong>Code:</strong> +7</p>
+  <p><strong>Population:</strong> 19 million</p>
+  <p><strong>Language:</strong> Kazakh, Russian</p>
+  <p><strong>Currency:</strong> Kazakhstani tenge (KZT)</p>
+  <a href="https://www.google.com/maps/place/Kazakhstan" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>25. Kosovo</h3>
+  <p><strong>Capital:</strong> Pristina</p>
+  <p><strong>Code:</strong> +383</p>
+  <p><strong>Population:</strong> 1.8 million</p>
+  <p><strong>Language:</strong> Albanian, Serbian</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Kosovo" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>26. Latvia</h3>
+  <p><strong>Capital:</strong> Riga</p>
+  <p><strong>Code:</strong> +371</p>
+  <p><strong>Population:</strong> 1.8 million</p>
+  <p><strong>Language:</strong> Latvian</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Latvia" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>27. Liechtenstein</h3>
+  <p><strong>Capital:</strong> Vaduz</p>
+  <p><strong>Code:</strong> +423</p>
+  <p><strong>Population:</strong> 39,000</p>
+  <p><strong>Language:</strong> German</p>
+  <p><strong>Currency:</strong> Swiss Franc (CHF)</p>
+  <a href="https://www.google.com/maps/place/Liechtenstein" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>28. Lithuania</h3>
+  <p><strong>Capital:</strong> Vilnius</p>
+  <p><strong>Code:</strong> +370</p>
+  <p><strong>Population:</strong> 2.8 million</p>
+  <p><strong>Language:</strong> Lithuanian</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Lithuania" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>29. Luxembourg</h3>
+  <p><strong>Capital:</strong> Luxembourg</p>
+  <p><strong>Code:</strong> +352</p>
+  <p><strong>Population:</strong> 650,000</p>
+  <p><strong>Language:</strong> Luxembourgish, French, German</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Luxembourg" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>30. Malta</h3>
+  <p><strong>Capital:</strong> Valletta</p>
+  <p><strong>Code:</strong> +356</p>
+  <p><strong>Population:</strong> 520,000</p>
+  <p><strong>Language:</strong> Maltese, English</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Malta" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>31. Moldova</h3>
+  <p><strong>Capital:</strong> Chișinău</p>
+  <p><strong>Code:</strong> +373</p>
+  <p><strong>Population:</strong> 2.6 million</p>
+  <p><strong>Language:</strong> Romanian</p>
+  <p><strong>Currency:</strong> Moldovan Leu (MDL)</p>
+  <a href="https://www.google.com/maps/place/Moldova" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>32. Monaco</h3>
+  <p><strong>Capital:</strong> Monaco</p>
+  <p><strong>Code:</strong> +377</p>
+  <p><strong>Population:</strong> 39,000</p>
+  <p><strong>Language:</strong> French</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Monaco" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>33. Montenegro</h3>
+  <p><strong>Capital:</strong> Podgorica</p>
+  <p><strong>Code:</strong> +382</p>
+  <p><strong>Population:</strong> 620,000</p>
+  <p><strong>Language:</strong> Montenegrin</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Montenegro" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>34. Netherlands</h3>
+  <p><strong>Capital:</strong> Amsterdam</p>
+  <p><strong>Code:</strong> +31</p>
+  <p><strong>Population:</strong> 17.7 million</p>
+  <p><strong>Language:</strong> Dutch</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Netherlands" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>35. North Macedonia</h3>
+  <p><strong>Capital:</strong> Skopje</p>
+  <p><strong>Code:</strong> +389</p>
+  <p><strong>Population:</strong> 2.1 million</p>
+  <p><strong>Language:</strong> Macedonian</p>
+  <p><strong>Currency:</strong> Macedonian Denar (MKD)</p>
+  <a href="https://www.google.com/maps/place/North+Macedonia" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>36. Norway</h3>
+  <p><strong>Capital:</strong> Oslo</p>
+  <p><strong>Code:</strong> +47</p>
+  <p><strong>Population:</strong> 5.4 million</p>
+  <p><strong>Language:</strong> Norwegian</p>
+  <p><strong>Currency:</strong> Norwegian Krone (NOK)</p>
+  <a href="https://www.google.com/maps/place/Norway" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>37. Poland</h3>
+  <p><strong>Capital:</strong> Warsaw</p>
+  <p><strong>Code:</strong> +48</p>
+  <p><strong>Population:</strong> 37.7 million</p>
+  <p><strong>Language:</strong> Polish</p>
+  <p><strong>Currency:</strong> Polish Zloty (PLN)</p>
+  <a href="https://www.google.com/maps/place/Poland" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>38. Portugal</h3>
+  <p><strong>Capital:</strong> Lisbon</p>
+  <p><strong>Code:</strong> +351</p>
+  <p><strong>Population:</strong> 10.2 million</p>
+  <p><strong>Language:</strong> Portuguese</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Portugal" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>39. Romania</h3>
+  <p><strong>Capital:</strong> Bucharest</p>
+  <p><strong>Code:</strong> +40</p>
+  <p><strong>Population:</strong> 19.5 million</p>
+  <p><strong>Language:</strong> Romanian</p>
+  <p><strong>Currency:</strong> Romanian Leu (RON)</p>
+  <a href="https://www.google.com/maps/place/Romania" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>40. Russia</h3>
+  <p><strong>Capital:</strong> Moscow</p>
+  <p><strong>Code:</strong> +7</p>
+  <p><strong>Population:</strong> 144 million</p>
+  <p><strong>Language:</strong> Russian</p>
+  <p><strong>Currency:</strong> Russian Ruble (RUB)</p>
+  <a href="https://www.google.com/maps/place/Russia" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>41. San Marino</h3>
+  <p><strong>Capital:</strong> San Marino</p>
+  <p><strong>Code:</strong> +378</p>
+  <p><strong>Population:</strong> ~34,000</p>
+  <p><strong>Language:</strong> Italian</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/San+Marino" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>42. Serbia</h3>
+  <p><strong>Capital:</strong> Belgrade</p>
+  <p><strong>Code:</strong> +381</p>
+  <p><strong>Population:</strong> ~6.7 million</p>
+  <p><strong>Language:</strong> Serbian</p>
+  <p><strong>Currency:</strong> Serbian dinar (RSD)</p>
+  <a href="https://www.google.com/maps/place/Serbia" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>43. Slovakia</h3>
+  <p><strong>Capital:</strong> Bratislava</p>
+  <p><strong>Code:</strong> +421</p>
+  <p><strong>Population:</strong> ~5.4 million</p>
+  <p><strong>Language:</strong> Slovak</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Slovakia" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>44. Slovenia</h3>
+  <p><strong>Capital:</strong> Ljubljana</p>
+  <p><strong>Code:</strong> +386</p>
+  <p><strong>Population:</strong> ~2.1 million</p>
+  <p><strong>Language:</strong> Slovene</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Slovenia" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>45. Spain</h3>
+  <p><strong>Capital:</strong> Madrid</p>
+  <p><strong>Code:</strong> +34</p>
+  <p><strong>Population:</strong> ~47 million</p>
+  <p><strong>Language:</strong> Spanish</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Spain" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>46. Sweden</h3>
+  <p><strong>Capital:</strong> Stockholm</p>
+  <p><strong>Code:</strong> +46</p>
+  <p><strong>Population:</strong> ~10.5 million</p>
+  <p><strong>Language:</strong> Swedish</p>
+  <p><strong>Currency:</strong> Swedish krona (SEK)</p>
+  <a href="https://www.google.com/maps/place/Sweden" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>47. Switzerland</h3>
+  <p><strong>Capital:</strong> Bern</p>
+  <p><strong>Code:</strong> +41</p>
+  <p><strong>Population:</strong> ~8.8 million</p>
+  <p><strong>Language:</strong> German, French, Italian, Romansh</p>
+  <p><strong>Currency:</strong> Swiss franc (CHF)</p>
+  <a href="https://www.google.com/maps/place/Switzerland" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>48. Turkey (partly in Europe)</h3>
+  <p><strong>Capital:</strong> Ankara</p>
+  <p><strong>Code:</strong> +90</p>
+  <p><strong>Population:</strong> ~85 million</p>
+  <p><strong>Language:</strong> Turkish</p>
+  <p><strong>Currency:</strong> Turkish lira (TRY)</p>
+  <a href="https://www.google.com/maps/place/Turkey" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>49. Ukraine</h3>
+  <p><strong>Capital:</strong> Kyiv</p>
+  <p><strong>Code:</strong> +380</p>
+  <p><strong>Population:</strong> ~36 million</p>
+  <p><strong>Language:</strong> Ukrainian</p>
+  <p><strong>Currency:</strong> Ukrainian hryvnia (UAH)</p>
+  <a href="https://www.google.com/maps/place/Ukraine" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>50. United Kingdom (UK)</h3>
+  <p><strong>Capital:</strong> London</p>
+  <p><strong>Code:</strong> +44</p>
+  <p><strong>Population:</strong> ~67 million</p>
+  <p><strong>Language:</strong> English</p>
+  <p><strong>Currency:</strong> Pound sterling (GBP)</p>
+  <a href="https://www.google.com/maps/place/United+Kingdom" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>51. Vatican City (Holy See)</h3>
+  <p><strong>Capital:</strong> Vatican City</p>
+  <p><strong>Code:</strong> +379</p>
+  <p><strong>Population:</strong> ~800</p>
+  <p><strong>Language:</strong> Italian, Latin</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://www.google.com/maps/place/Vatican+City" target="_blank">View on Map</a>
+</div>
+    
+      </section>
+
+  <footer>
+    © 2025 Europe Continent Countries| Created by BlackWood Ai
+  </footer>
+
+  <script>
+    function filterCountries() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.querySelectorAll(".card");
+
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+
+</body>
+</html>
