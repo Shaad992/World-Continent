@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Asia Continent - Countries</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: rgba(0, 0, 0, 0.6);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    }
+
+    .main-heading {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #00bfff, #66fcf1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 2px;
+    }
+
+    .search-box {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .search-box input {
+      padding: 10px 15px;
+      width: 300px;
+      max-width: 90%;
+      border-radius: 25px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      box-shadow: 0 0 10px rgba(0,191,255, 0.6);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 60px 40px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      border-radius: 15px;
+      padding: 30px 20px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 0 20px rgba(0,191,255, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0,191,255, 0.4);
+    }
+
+    .card h3 {
+      font-size: 1.6rem;
+      color: #00bfff;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #ccc;
+      margin: 4px 0;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #00bfff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .card a:hover {
+      background-color: #0099cc;
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0.5);
+      color: #aaa;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .main-heading {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="main-heading">Asia Continent Countries</h1>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search by country or code..." onkeyup="filterCountries()" />
+    </div>
+  </header>
+
+  <section class="container" id="countryCards">
+    
+    
+<div class="card">
+  <h3>1. Afghanistan</h3>
+  <p><strong>Capital:</strong> Kabul</p>
+  <p><strong>Country Code:</strong> +93</p>
+  <p><strong>Population:</strong> 40 million</p>
+  <p><strong>National Language:</strong> Pashto, Dari</p>
+  <p><strong>Currency:</strong> Afghan Afghani (AFN)</p>
+  <p><a href="https://maps.google.com/?q=Afghanistan" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>2. Armenia</h3>
+  <p><strong>Capital:</strong> Yerevan</p>
+  <p><strong>Country Code:</strong> +374</p>
+  <p><strong>Population:</strong> 2.8 million</p>
+  <p><strong>National Language:</strong> Armenian</p>
+  <p><strong>Currency:</strong> Armenian Dram (AMD)</p>
+  <p><a href="https://maps.google.com/?q=Armenia" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>3. Azerbaijan</h3>
+  <p><strong>Capital:</strong> Baku</p>
+  <p><strong>Country Code:</strong> +994</p>
+  <p><strong>Population:</strong> 10.1 million</p>
+  <p><strong>National Language:</strong> Azerbaijani</p>
+  <p><strong>Currency:</strong> Azerbaijani Manat (AZN)</p>
+  <p><a href="https://maps.google.com/?q=Azerbaijan" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>4. Bahrain</h3>
+  <p><strong>Capital:</strong> Manama</p>
+  <p><strong>Country Code:</strong> +973</p>
+  <p><strong>Population:</strong> 1.7 million</p>
+  <p><strong>National Language:</strong> Arabic</p>
+  <p><strong>Currency:</strong> Bahraini Dinar (BHD)</p>
+  <p><a href="https://maps.google.com/?q=Bahrain" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>5. Bangladesh</h3>
+  <p><strong>Capital:</strong> Dhaka</p>
+  <p><strong>Country Code:</strong> +880</p>
+  <p><strong>Population:</strong> 166 million</p>
+  <p><strong>National Language:</strong> Bengali</p>
+  <p><strong>Currency:</strong> Bangladeshi Taka (BDT)</p>
+  <p><a href="https://maps.google.com/?q=Bangladesh" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>6. Bhutan</h3>
+  <p><strong>Capital:</strong> Thimphu</p>
+  <p><strong>Country Code:</strong> +975</p>
+  <p><strong>Population:</strong> 770,000</p>
+  <p><strong>National Language:</strong> Dzongkha</p>
+  <p><strong>Currency:</strong> Bhutanese Ngultrum (BTN)</p>
+  <p><a href="https://maps.google.com/?q=Bhutan" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>7. Brunei</h3>
+  <p><strong>Capital:</strong> Bandar Seri Begawan</p>
+  <p><strong>Country Code:</strong> +673</p>
+  <p><strong>Population:</strong> 460,000</p>
+  <p><strong>National Language:</strong> Malay</p>
+  <p><strong>Currency:</strong> Brunei Dollar (BND)</p>
+  <p><a href="https://maps.google.com/?q=Brunei" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h3>8. Cambodia</h3>
+  <p><strong>Capital:</strong> Phnom Penh</p>
+  <p><strong>Country Code:</strong> +855</p>
+  <p><strong>Population:</strong> 17 million</p>
+  <p><strong>National Language:</strong> Khmer</p>
+  <p><strong>Currency:</strong> Cambodian Riel (KHR)</p>
+  <a href="https://maps.google.com/?q=Cambodia" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>9. China</h3>
+  <p><strong>Capital:</strong> Beijing</p>
+  <p><strong>Country Code:</strong> +86</p>
+  <p><strong>Population:</strong> 1.4 billion</p>
+  <p><strong>National Language:</strong> Mandarin</p>
+  <p><strong>Currency:</strong> Chinese Yuan (CNY)</p>
+  <a href="https://maps.google.com/?q=China" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>10. Cyprus</h3>
+  <p><strong>Capital:</strong> Nicosia</p>
+  <p><strong>Country Code:</strong> +357</p>
+  <p><strong>Population:</strong> 1.2 million</p>
+  <p><strong>National Language:</strong> Greek, Turkish</p>
+  <p><strong>Currency:</strong> Euro (EUR)</p>
+  <a href="https://maps.google.com/?q=Cyprus" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>11. Georgia</h3>
+  <p><strong>Capital:</strong> Tbilisi</p>
+  <p><strong>Country Code:</strong> +995</p>
+  <p><strong>Population:</strong> 3.7 million</p>
+  <p><strong>National Language:</strong> Georgian</p>
+  <p><strong>Currency:</strong> Georgian Lari (GEL)</p>
+  <a href="https://maps.google.com/?q=Georgia" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>12. India</h3>
+  <p><strong>Capital:</strong> New Delhi</p>
+  <p><strong>Country Code:</strong> +91</p>
+  <p><strong>Population:</strong> 1.4 billion</p>
+  <p><strong>National Language:</strong> Hindi, English</p>
+  <p><strong>Currency:</strong> Indian Rupee (INR)</p>
+  <a href="https://maps.google.com/?q=India" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>13. Indonesia</h3>
+  <p><strong>Capital:</strong> Jakarta</p>
+  <p><strong>Country Code:</strong> +62</p>
+  <p><strong>Population:</strong> 273 million</p>
+  <p><strong>National Language:</strong> Indonesian</p>
+  <p><strong>Currency:</strong> Indonesian Rupiah (IDR)</p>
+  <a href="https://maps.google.com/?q=Indonesia" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h3>14. Iran</h3>
+  <p><strong>Capital:</strong> Tehran</p>
+  <p><strong>Country Code:</strong> +98</p>
+  <p><strong>Population:</strong> 87 million</p>
+  <p><strong>National Language:</strong> Persian (Farsi)</p>
+  <p><strong>Currency:</strong> Iranian Rial (IRR)</p>
+  <a href="https://maps.google.com/?q=Iran" target="_blank">View on Map</a>
+</div>
+
+<div class="card">
+  <h2>15. Iraq</h2>
+  <p><strong>Capital:</strong> Baghdad</p>
+  <p><strong>Country Code:</strong> +964</p>
+  <p><strong>Population:</strong> 43 million</p>
+  <p><strong>Language:</strong> Arabic, Kurdish</p>
+  <p><strong>Currency:</strong> Iraqi Dinar (IQD)</p>
+  <p><a href="https://www.google.com/maps/place/Iraq" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>16. Israel</h2>
+  <p><strong>Capital:</strong> Jerusalem</p>
+  <p><strong>Country Code:</strong> +972</p>
+  <p><strong>Population:</strong> 9.7 million</p>
+  <p><strong>Language:</strong> Hebrew, Arabic</p>
+  <p><strong>Currency:</strong> Israeli New Shekel (ILS)</p>
+  <p><a href="https://www.google.com/maps/place/Israel" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>17. Japan</h2>
+  <p><strong>Capital:</strong> Tokyo</p>
+  <p><strong>Country Code:</strong> +81</p>
+  <p><strong>Population:</strong> 124 million</p>
+  <p><strong>Language:</strong> Japanese</p>
+  <p><strong>Currency:</strong> Japanese Yen (JPY)</p>
+  <p><a href="https://www.google.com/maps/place/Japan" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>18. Jordan</h2>
+  <p><strong>Capital:</strong> Amman</p>
+  <p><strong>Country Code:</strong> +962</p>
+  <p><strong>Population:</strong> 11.2 million</p>
+  <p><strong>Language:</strong> Arabic</p>
+  <p><strong>Currency:</strong> Jordanian Dinar (JOD)</p>
+  <p><a href="https://www.google.com/maps/place/Jordan" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>19. Kazakhstan</h2>
+  <p><strong>Capital:</strong> Astana</p>
+  <p><strong>Country Code:</strong> +7</p>
+  <p><strong>Population:</strong> 20 million</p>
+  <p><strong>Language:</strong> Kazakh, Russian</p>
+  <p><strong>Currency:</strong> Kazakhstani Tenge (KZT)</p>
+  <p><a href="https://www.google.com/maps/place/Kazakhstan" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>20. Kuwait</h2>
+  <p><strong>Capital:</strong> Kuwait City</p>
+  <p><strong>Country Code:</strong> +965</p>
+  <p><strong>Population:</strong> 4.4 million</p>
+  <p><strong>Language:</strong> Arabic</p>
+  <p><strong>Currency:</strong> Kuwaiti Dinar (KWD)</p>
+  <p><a href="https://www.google.com/maps/place/Kuwait" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>21. Kyrgyzstan</h2>
+  <p><strong>Capital:</strong> Bishkek</p>
+  <p><strong>Country Code:</strong> +996</p>
+  <p><strong>Population:</strong> 7 million</p>
+  <p><strong>Language:</strong> Kyrgyz, Russian</p>
+  <p><strong>Currency:</strong> Kyrgyzstani Som (KGS)</p>
+  <p><a href="https://www.google.com/maps/place/Kyrgyzstan" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>22. Laos</h2>
+  <p><strong>Capital:</strong> Vientiane</p>
+  <p><strong>Country Code:</strong> +856</p>
+  <p><strong>Population:</strong> 7.5 million</p>
+  <p><strong>Language:</strong> Lao</p>
+  <p><strong>Currency:</strong> Lao Kip (LAK)</p>
+  <p><a href="https://www.google.com/maps/place/Laos" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>23. Lebanon</h2>
+  <p><strong>Capital:</strong> Beirut</p>
+  <p><strong>Country Code:</strong> +961</p>
+  <p><strong>Population:</strong> 5.3 million</p>
+  <p><strong>Language:</strong> Arabic, French</p>
+  <p><strong>Currency:</strong> Lebanese Pound (LBP)</p>
+  <p><a href="https://www.google.com/maps/place/Lebanon" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>24. Malaysia</h2>
+  <p><strong>Capital:</strong> Kuala Lumpur</p>
+  <p><strong>Country Code:</strong> +60</p>
+  <p><strong>Population:</strong> 33.5 million</p>
+  <p><strong>Language:</strong> Malay</p>
+  <p><strong>Currency:</strong> Malaysian Ringgit (MYR)</p>
+  <p><a href="https://www.google.com/maps/place/Malaysia" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>25. Maldives</h2>
+  <p><strong>Capital:</strong> Malé</p>
+  <p><strong>Country Code:</strong> +960</p>
+  <p><strong>Population:</strong> 0.55 million</p>
+  <p><strong>Language:</strong> Dhivehi</p>
+  <p><strong>Currency:</strong> Maldivian Rufiyaa (MVR)</p>
+  <p><a href="https://www.google.com/maps/place/Maldives" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>26. Mongolia</h2>
+  <p><strong>Capital:</strong> Ulaanbaatar</p>
+  <p><strong>Country Code:</strong> +976</p>
+  <p><strong>Population:</strong> 3.5 million</p>
+  <p><strong>Language:</strong> Mongolian</p>
+  <p><strong>Currency:</strong> Mongolian Tögrög (MNT)</p>
+  <p><a href="https://www.google.com/maps/place/Mongolia" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>27. Myanmar</h2>
+  <p><strong>Capital:</strong> Naypyidaw</p>
+  <p><strong>Country Code:</strong> +95</p>
+  <p><strong>Population:</strong> 55.2 million</p>
+  <p><strong>Language:</strong> Burmese</p>
+  <p><strong>Currency:</strong> Burmese Kyat (MMK)</p>
+  <p><a href="https://www.google.com/maps/place/Myanmar" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>28. Nepal</h2>
+  <p><strong>Capital:</strong> Kathmandu</p>
+  <p><strong>Country Code:</strong> +977</p>
+  <p><strong>Population:</strong> 31.5 million</p>
+  <p><strong>Language:</strong> Nepali</p>
+  <p><strong>Currency:</strong> Nepalese Rupee (NPR)</p>
+  <p><a href="https://www.google.com/maps/place/Nepal" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>29. North Korea</h2>
+  <p><strong>Capital:</strong> Pyongyang</p>
+  <p><strong>Country Code:</strong> +850</p>
+  <p><strong>Population:</strong> 25.7 million</p>
+  <p><strong>Language:</strong> Korean</p>
+  <p><strong>Currency:</strong> North Korean Won (KPW)</p>
+  <p><a href="https://www.google.com/maps/place/North+Korea" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>30. Oman</h2>
+  <p><strong>Capital:</strong> Muscat</p>
+  <p><strong>Country Code:</strong> +968</p>
+  <p><strong>Population:</strong> 4.6 million</p>
+  <p><strong>Language:</strong> Arabic</p>
+  <p><strong>Currency:</strong> Omani Rial (OMR)</p>
+  <p><a href="https://www.google.com/maps/place/Oman" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>31. Pakistan</h2>
+  <p><strong>Capital:</strong> Islamabad</p>
+  <p><strong>Country Code:</strong> +92</p>
+  <p><strong>Population:</strong> 240 million</p>
+  <p><strong>National Language:</strong> Urdu</p>
+  <p><strong>Currency:</strong> Pakistani Rupee (PKR)</p>
+  <p><a href="https://www.google.com/maps/place/Pakistan" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>32. Palestine</h2>
+  <p><strong>Capital:</strong> Ramallah (de facto)</p>
+  <p><strong>Country Code:</strong> +970</p>
+  <p><strong>Population:</strong> 5 million</p>
+  <p><strong>National Language:</strong> Arabic</p>
+  <p><strong>Currency:</strong> Israeli Shekel (ILS), Jordanian Dinar (JOD)</p>
+  <p><a href="https://www.google.com/maps/place/Palestine" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>33. Philippines</h2>
+  <p><strong>Capital:</strong> Manila</p>
+  <p><strong>Country Code:</strong> +63</p>
+  <p><strong>Population:</strong> 113 million</p>
+  <p><strong>National Language:</strong> Filipino, English</p>
+  <p><strong>Currency:</strong> Philippine Peso (PHP)</p>
+  <p><a href="https://www.google.com/maps/place/Philippines" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>34. Qatar</h2>
+  <p><strong>Capital:</strong> Doha</p>
+  <p><strong>Country Code:</strong> +974</p>
+  <p><strong>Population:</strong> 3 million</p>
+  <p><strong>National Language:</strong> Arabic</p>
+  <p><strong>Currency:</strong> Qatari Riyal (QAR)</p>
+  <p><a href="https://www.google.com/maps/place/Qatar" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>35. Saudi Arabia</h2>
+  <p><strong>Capital:</strong> Riyadh</p>
+  <p><strong>Country Code:</strong> +966</p>
+  <p><strong>Population:</strong> 36 million</p>
+  <p><strong>National Language:</strong> Arabic</p>
+  <p><strong>Currency:</strong> Saudi Riyal (SAR)</p>
+  <p><a href="https://www.google.com/maps/place/Saudi+Arabia" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>36. Singapore</h2>
+  <p><strong>Capital:</strong> Singapore</p>
+  <p><strong>Country Code:</strong> +65</p>
+  <p><strong>Population:</strong> 6 million</p>
+  <p><strong>National Language:</strong> Malay, English, Mandarin, Tamil</p>
+  <p><strong>Currency:</strong> Singapore Dollar (SGD)</p>
+  <p><a href="https://www.google.com/maps/place/Singapore" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>37. South Korea</h2>
+  <p><strong>Capital:</strong> Seoul</p>
+  <p><strong>Country Code:</strong> +82</p>
+  <p><strong>Population:</strong> 52 million</p>
+  <p><strong>National Language:</strong> Korean</p>
+  <p><strong>Currency:</strong> South Korean Won (KRW)</p>
+  <p><a href="https://www.google.com/maps/place/South+Korea" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>38. Sri Lanka</h2>
+  <p><strong>Capital:</strong> Sri Jayawardenepura Kotte (official), Colombo (commercial)</p>
+  <p><strong>Country Code:</strong> +94</p>
+  <p><strong>Population:</strong> 22 million</p>
+  <p><strong>National Language:</strong> Sinhala, Tamil</p>
+  <p><strong>Currency:</strong> Sri Lankan Rupee (LKR)</p>
+  <p><a href="https://www.google.com/maps/place/Sri+Lanka" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>39. Syria</h2>
+  <p><strong>Capital:</strong> Damascus</p>
+  <p><strong>Country Code:</strong> +963</p>
+  <p><strong>Population:</strong> 22 million</p>
+  <p><strong>National Language:</strong> Arabic</p>
+  <p><strong>Currency:</strong> Syrian Pound (SYP)</p>
+  <p><a href="https://www.google.com/maps/place/Syria" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>40. Taiwan</h2>
+  <p><strong>Capital:</strong> Taipei</p>
+  <p><strong>Country Code:</strong> +886</p>
+  <p><strong>Population:</strong> 23 million</p>
+  <p><strong>National Language:</strong> Mandarin Chinese</p>
+  <p><strong>Currency:</strong> New Taiwan Dollar (TWD)</p>
+  <p><a href="https://www.google.com/maps/place/Taiwan" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>41. Tajikistan</h2>
+  <p><strong>Capital:</strong> Dushanbe</p>
+  <p><strong>Country Code:</strong> +992</p>
+  <p><strong>Population:</strong> 10 million</p>
+  <p><strong>National Language:</strong> Tajik</p>
+  <p><strong>Currency:</strong> Tajikistani Somoni (TJS)</p>
+  <p><a href="https://www.google.com/maps/place/Tajikistan" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>42. Thailand</h2>
+  <p><strong>Capital:</strong> Bangkok</p>
+  <p><strong>Country Code:</strong> +66</p>
+  <p><strong>Population:</strong> 70 million</p>
+  <p><strong>National Language:</strong> Thai</p>
+  <p><strong>Currency:</strong> Thai Baht (THB)</p>
+  <p><a href="https://www.google.com/maps/place/Thailand" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>43. Timor-Leste</h2>
+  <p><strong>Capital:</strong> Dili</p>
+  <p><strong>Country Code:</strong> +670</p>
+  <p><strong>Population:</strong> 1.3 million</p>
+  <p><strong>National Language:</strong> Tetum, Portuguese</p>
+  <p><strong>Currency:</strong> United States Dollar (USD)</p>
+  <p><a href="https://www.google.com/maps/place/Timor-Leste" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>44. Turkey</h2>
+  <p><strong>Capital:</strong> Ankara</p>
+  <p><strong>Country Code:</strong> +90</p>
+  <p><strong>Population:</strong> 85 million</p>
+  <p><strong>National Language:</strong> Turkish</p>
+  <p><strong>Currency:</strong> Turkish Lira (TRY)</p>
+  <p><a href="https://www.google.com/maps/place/Turkey" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>45. Turkmenistan</h2>
+  <p><strong>Capital:</strong> Ashgabat</p>
+  <p><strong>Country Code:</strong> +993</p>
+  <p><strong>Population:</strong> 6 million</p>
+  <p><strong>National Language:</strong> Turkmen</p>
+  <p><strong>Currency:</strong> Turkmenistani Manat (TMT)</p>
+  <p><a href="https://www.google.com/maps/place/Turkmenistan" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>46. United Arab Emirates</h2>
+  <p><strong>Capital:</strong> Abu Dhabi</p>
+  <p><strong>Country Code:</strong> +971</p>
+  <p><strong>Population:</strong> 10 million</p>
+  <p><strong>National Language:</strong> Arabic</p>
+  <p><strong>Currency:</strong> UAE Dirham (AED)</p>
+  <p><a href="https://www.google.com/maps/place/United+Arab+Emirates" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>47. Uzbekistan</h2>
+  <p><strong>Capital:</strong> Tashkent</p>
+  <p><strong>Country Code:</strong> +998</p>
+  <p><strong>Population:</strong> 36 million</p>
+  <p><strong>National Language:</strong> Uzbek</p>
+  <p><strong>Currency:</strong> Uzbekistani Som (UZS)</p>
+  <p><a href="https://www.google.com/maps/place/Uzbekistan" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>48. Vietnam</h2>
+  <p><strong>Capital:</strong> Hanoi</p>
+  <p><strong>Country Code:</strong> +84</p>
+  <p><strong>Population:</strong> 99 million</p>
+  <p><strong>National Language:</strong> Vietnamese</p>
+  <p><strong>Currency:</strong> Vietnamese Dong (VND)</p>
+  <p><a href="https://www.google.com/maps/place/Vietnam" target="_blank">View on Map</a></p>
+</div>
+
+<div class="card">
+  <h2>49. Yemen</h2>
+  <p><strong>Capital:</strong> Sana'a</p>
+  <p><strong>Country Code:</strong> +967</p>
+  <p><strong>Population:</strong> 34 million</p>
+  <p><strong>National Language:</strong> Arabic</p>
+  <p><strong>Currency:</strong> Yemeni Rial (YER)</p>
+  <p><a href="https://www.google.com/maps/place/Yemen" target="_blank">View on Map</a></p>
+</div>
+
+  </section>
+
+  <footer>
+    © 2025 Asia Continent Countries| Created by BlackWood Ai
+  </footer>
+
+  <script>
+    function filterCountries() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const cards = document.querySelectorAll(".card");
+
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+
+</body>
+</html>
